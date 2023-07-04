@@ -1,0 +1,18 @@
+<h2>
+  Form
+</h2>
+<form [formGroup]="mainForm">
+  <input type="text" formControlName="name" placeholder="Name">
+  <app-address-form [addressForm]="addressForm"></app-address-form>
+</form>
+
+<h2>
+  Form Value
+</h2>
+{{mainForm.getRawValue() | json}}
+
+Touched: {{mainForm.touched}}
+
+<hr>
+
+Tutorial: <a href="https://www.tsmean.com/articles/angular/angular-control-value-accessor-example/">https://www.tsmean.com/articles/angular/angular-control-value-accessor-example/</a>
